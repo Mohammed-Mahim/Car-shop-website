@@ -1,9 +1,11 @@
-/* .bg-pic{
-    background: url('https://unicoderbd.com/theme/html/chaka/assets/images/slider/slider_bg.png');
+.bg-pic{
+    background-image: url('http://html.webqoda.com/mobeva/images/home-two-slider-1.jpg');
     background-repeat: no-repeat;
-    background-position: cover;
+    background-position: center center;
+    opacity: 0.9;
     
-} */
-.text-style{
-    font-size: 50px;
+   
+    height: 100vh;
+    
 }
+

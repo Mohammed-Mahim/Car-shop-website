@@ -5,7 +5,7 @@ const Explore = () => {
     const [services, setServices] = useState([])
   
     useEffect(()=>{
-        fetch('/item.json')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -23,9 +23,10 @@ const Explore = () => {
                   <h2 className="text-danger">{pd?.name}</h2>
                   <h3 className="text-secondary">{pd?.price}</h3>
                   <p className="text-muted fw-light">{pd?.des}</p>
-                  <Link >
+                  <Link to={`/products/${pd._id}`}>
                     <button className="btn btn-info">Buy Now</button>
                   </Link>
+                  
                 </div>
               </div>
             ))}

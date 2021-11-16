@@ -1,0 +1,11 @@
+
+.bg-contact-pic{
+    background-image: url('http://html.webqoda.com/mobeva/images/banners/contact-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.9;
+    background-size: auto;
+    height: 100vh;
+    
+   
+}

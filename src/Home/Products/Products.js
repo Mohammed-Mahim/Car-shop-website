@@ -7,13 +7,14 @@ const Products = () => {
     const [services, setServices] = useState([])
   
     useEffect(()=>{
-        fetch('/item.json')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
     return (
-        <div className="p-3 container ">
-        <h1 className="text-center">All Product </h1>
+        <div className="container py-4 my-5">
+         <span className="text-danger">Popular Cars</span>
+          <h2 className="mx-2">Most Popular Cars <br /> In Our Shop</h2>
         <div className="services">
           <div className="row ">
             {services?.slice(0,6).map((pd) => (
@@ -25,12 +26,13 @@ const Products = () => {
                   <h2 className="text-danger">{pd?.name}</h2>
                   <h3 className="text-secondary">{pd?.price}</h3>
                   <p className="text-muted fw-light">{pd?.des}</p>
-                  <Link to="">
+                  <Link to={`/products/${pd._id}`}>
                     <button className="btn btn-info" >Buy Now</button>
                   </Link>
                 </div>
               </div>
             ))}
+            
           </div>
         </div>
       </div>

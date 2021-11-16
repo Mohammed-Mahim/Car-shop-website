@@ -10,7 +10,7 @@ const Footer = () => {
             <div>
                     <h2>Contact</h2>
                     <p>Phone <br /> <span>11-55-777-88</span></p>
-                    <p>Email <br /> <span>onlinefood.com</span></p>
+                    <p>Email <br /> <span>carShop.com</span></p>
                     <p>Address <br /> <span>123, New York , </span></p>
             </div>
             </div>
@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
                 </div>
                 <div className="copyright text-white flex justify-around text-center border-top">
-                <p>Copyright &copy; 2021 Online Food Order. Designed By Ah-Mahim</p>
+                <p>Copyright &copy; 2021 Online Car Shop. Designed By Ah-Mahim</p>
                 
             </div>
             </div>
