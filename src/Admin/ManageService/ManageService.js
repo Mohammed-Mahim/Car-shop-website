@@ -5,7 +5,7 @@ const ManageService = () => {
     const [properties, setProperties] = useState([]);
     const [isDeleted, setIsDeleted] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/addCar')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProperties(data))
     }, [isDeleted])
@@ -13,7 +13,7 @@ const ManageService = () => {
     const deleteService = (id) => {
         const proceed = window.confirm('Cancel Booking!Are you sure?');
         if (proceed) {
-            axios.delete(`http://localhost:5000/addCar/${id}`)
+            axios.delete(`http://localhost:5000/products/${id}`)
                 .then(res => {
                     if (res.data.acknowledged) {
                         alert('Delete Successful!')
@@ -41,7 +41,7 @@ const ManageService = () => {
                         {
                             properties.map(item =>
                                 <tr key={item._id}>
-                                    <td>{item.des}</td>
+                                    <td>{item.name}</td>
                                     <td>
                                         <button onClick={() => deleteService(item._id)} className="btn btn-danger">Delete</button>
                                     </td>

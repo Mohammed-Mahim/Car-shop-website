@@ -11,7 +11,7 @@ const Explore = () => {
     },[])
     return (
         <div className="p-3 container">
-        <h1 className="text-center">All Product </h1>
+        <h4 className="text-center text-danger">All Cars </h4>
         <div className="services">
           <div className="row">
             {services?.map((pd) => (

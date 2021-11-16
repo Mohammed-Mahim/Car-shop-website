@@ -13,7 +13,8 @@ const Navigation = () => {
                         <Link to="/home">
                             <Navbar.Brand>
                                 <div className="logo">
-                                    <img width="100%" src="https://i.ibb.co/qs5f7wQ/carmax-logo.png" alt="logo" />
+                                    {/* <img width="100%" src="https://i.ibb.co/qs5f7wQ/carmax-logo.png" alt="logo" /> */}
+                                    <h3 className="my-3">Car Shop </h3>
                                 </div>
                             </Navbar.Brand>
                         </Link>
