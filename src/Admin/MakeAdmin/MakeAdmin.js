@@ -4,7 +4,7 @@ import "./MakeAdmin.css";
 const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        axios.put(`http://localhost:5000/users/${data.email}`)
+        axios.put(`https://limitless-hollows-16307.herokuapp.com/users/${data.email}`)
             .then(res => {
                 if (res.data.modifiedCount) {
                     alert("Admin added successful");

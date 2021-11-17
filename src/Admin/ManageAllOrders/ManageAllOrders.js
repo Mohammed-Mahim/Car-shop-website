@@ -6,14 +6,14 @@ const [bookings, setBookings] = useState([]);
 const [isdeleted, setIsDeleted] = useState(false);
 const [isUpdated, setIsUpdated] = useState(false);
 useEffect(() => {
-    fetch('http://localhost:5000/myOrders')
+    fetch('https://limitless-hollows-16307.herokuapp.com/myOrders')
         .then(res => res.json())
         .then(data => setBookings(data))
 }, [isdeleted, isUpdated])
 const handleDelete = id => {
     const proceed = window.confirm('Cancel Booking!Are you sure?');
     if (proceed) {
-        axios.delete(`http://localhost:5000/myOrders/${id}`)
+        axios.delete(`https://limitless-hollows-16307.herokuapp.com/myOrders/${id}`)
             .then(res => {
                 if (res.data.acknowledged) {
                     alert('Delete Successful!')
@@ -32,7 +32,7 @@ const handleUpdate = (id) => {
         return
     }
 
-    axios.put(`http://localhost:5000/myOrders/${id}`, {
+    axios.put(`https://limitless-hollows-16307.herokuapp.com/myOrders/${id}`, {
         status: status
     })
         .then(res => {

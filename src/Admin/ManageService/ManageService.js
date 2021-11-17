@@ -5,7 +5,7 @@ const ManageService = () => {
     const [properties, setProperties] = useState([]);
     const [isDeleted, setIsDeleted] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://limitless-hollows-16307.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProperties(data))
     }, [isDeleted])
@@ -13,7 +13,7 @@ const ManageService = () => {
     const deleteService = (id) => {
         const proceed = window.confirm('Cancel Booking!Are you sure?');
         if (proceed) {
-            axios.delete(`http://localhost:5000/products/${id}`)
+            axios.delete(`https://limitless-hollows-16307.herokuapp.com/products/${id}`)
                 .then(res => {
                     if (res.data.acknowledged) {
                         alert('Delete Successful!')

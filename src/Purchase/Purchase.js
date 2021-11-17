@@ -11,7 +11,7 @@ const Purchase = () => {
     const{user} = useAuth();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/specialProducts/${serviceId}`)
+        fetch(`https://limitless-hollows-16307.herokuapp.com/specialProducts/${serviceId}`)
         .then(res=> res.json())
         .then(data => setDetails(data))
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,7 +26,7 @@ const Purchase = () => {
             status: 'pending'
         };
 
-        axios.post('http://localhost:5000/myOrders', orderInfo)
+        axios.post('https://limitless-hollows-16307.herokuapp.com/myOrders', orderInfo)
         .then(res => {
             console.log(res);
             if (res.data.acknowledged) {

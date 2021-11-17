@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [isCanceled, setIsCanceled] = useState(null);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myOrders?email=${user.email}`)
+        fetch(`https://limitless-hollows-16307.herokuapp.com/myOrders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=>{
             setOrders(data)
@@ -18,7 +18,7 @@ const MyOrders = () => {
     },[isCanceled]);
 
     const handleCancel = id =>{
-        fetch(`http://localhost:5000/myOrders/${id}`,{
+        fetch(`https://limitless-hollows-16307.herokuapp.com/myOrders/${id}`,{
             method:"DELETE",
         })
         .then(res => res.json())

@@ -5,7 +5,7 @@ const Explore = () => {
     const [services, setServices] = useState([])
   
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://limitless-hollows-16307.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
