@@ -12,7 +12,7 @@ const Contact = () => {
                 <h1 className="my-5">Contact </h1>
                
                <Link to="/home" className="text-decoration-none text-white py-5">
-                   <a href="#">Home</a>/ <a href="#">Contact</a>
+                   <a href="#">Home</a> / <a href="#">Contact</a>
                 </Link>
               
                     </div>
