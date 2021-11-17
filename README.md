@@ -1,10 +1,10 @@
 
 
-<<<<<<< HEAD
+
 
 
 # live link - https://car-website-56530.web.app
->>>>>>> 3cf2f57f0cbfe00d2cba503e00883f1c4dd7b1dc
+
 
 ## Features
 ##	This project is built by React.js, Bootstrap, Node.js, MongoBD.
